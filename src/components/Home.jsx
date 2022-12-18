@@ -5,7 +5,8 @@ import { FaGithub, FaLinkedinIn, } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import { TypeAnimation } from 'react-type-animation'
-import { Link } from 'react-scroll'
+import { Tooltip as ReactTooltip } from 'react-tooltip'
+import 'react-tooltip/dist/react-tooltip.css'
 
 const Home = () => {
 
@@ -13,23 +14,47 @@ const Home = () => {
                 {
                         id: 1,
                         href: 'https://www.linkedin.com/in/raisul-islam-416b88119/',
-                        icon: <FaLinkedinIn className='border-2 rounded-md px-1 ' size={35} />
+                        icon: <FaLinkedinIn className='border-2 rounded-md px-1 ' size={35} />,
+                        tipId: 'tool-tip1',
+                        name: <ReactTooltip
+                                anchorId='tool-tip1'
+                                place='bottom'
+                                content='LinkedIn'
+                        />
                 },
                 {
                         id: 2,
                         href: 'https://github.com/Raisul999',
-                        icon: <FaGithub size={35} />
+                        icon: <FaGithub size={35} />,
+                        tipId: 'tool-tip2',
+                        name: <ReactTooltip
+                        anchorId='tool-tip2'
+                        place='bottom'
+                        content='GitHub'
+                />
                 },
                 {
                         id: 3,
                         href: 'mailto:rislam.arnob@gmail.com',
-                        icon: <HiOutlineMail className='border-2 rounded-md px-1 ' size={35} />
+                        icon: <HiOutlineMail className='border-2 rounded-md px-1 ' size={35} />,
+                        tipId: 'tool-tip3',
+                        name: <ReactTooltip
+                        anchorId='tool-tip3'
+                        place='bottom'
+                        content='Mail'
+                />
                 },
                 {
                         id: 4,
                         href: '/Raisul_Islam.pdf',
                         icon: <BsFillPersonLinesFill className='border-2 rounded-md px-1 ' size={35} />,
-                        download: true
+                        download: true,
+                        tipId: 'tool-tip4',
+                        name: <ReactTooltip
+                        anchorId='tool-tip4'
+                        place='bottom'
+                        content='Resume'
+                />
                 },
         ]
         return (
@@ -70,11 +95,14 @@ const Home = () => {
                                 <div className='flex flex-row md:flex-col lg:hidden'>
 
                                         {
-                                                socials.map(({ id, href, icon, download }) => (
-                                                        <a key={id} href={href} download={download} target='_blank'>
-                                                                <span className='flex justify-between items-center py-8 px-2 text-white mt-[-20px] cursor-pointer hover:scale-110 duration-200'>
+                                                socials.map(({ id, href, icon, download, name, tipId }) => (
+                                                        <a key={id} id={tipId} href={href} download={download} target='_blank'>
+                                                                <span  className='flex justify-between items-center py-8 px-2 text-white mt-[-20px] cursor-pointer hover:scale-110 duration-200'>
                                                                         {icon}
+                                                                        
                                                                 </span>
+                                                                {name}
+
                                                         </a>
                                                 ))
                                         }
