@@ -1,17 +1,27 @@
-import React from 'react'
+import {useEffect} from 'react'
 import mgx from '../assets/portfolio/mgx.png'
 import goal from '../assets/portfolio/goal.png'
 import restro from '../assets/portfolio/restro.png'
 import pwa from '../assets/portfolio/pwa.png'
 import word from '../assets/portfolio/word.png'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 const Portfolio = () => {
+
+        useEffect(() => {
+                AOS.init({
+                        delay: 100, // values from 0 to 3000, with step 50ms
+                        duration: 1500,
+                        once: true
+                });
+        }, [])
         
         const portfolios = [
                 {
                         id: 1,
                         src: mgx,
-                        link: 'https://www.mgx.com/bd'
+                        link: 'https://www.mgx.com/bd',
                 },
                 {
                         id: 2,
@@ -37,7 +47,7 @@ const Portfolio = () => {
         return (
                 <div name='portfolio' className='w-full bg-gradient-to-b from-zinc-600 to-zinc-700 text-white pt-20'>
                         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full '>
-                                <div>
+                                <div data-aos='fade-down'>
                                         <p className='text-4xl font-bold inline border-b-4  border-gray-500'>
                                                 Portfolio
                                         </p>
@@ -49,8 +59,8 @@ const Portfolio = () => {
                                 <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0'>
                                         {
                                                 portfolios.map(({ id, src, link }) => (
-                                                        <div key={id} className='shadow-md shadow-black-800 rounded-lg'>
-                                                                <img src={src} alt="" className='rounded-md duration-200 hover:scale-105' />
+                                                        <div data-aos='fade-right' key={id} className='shadow-md shadow-black-800 rounded-lg'>
+                                                                <img src={src} className='rounded-md duration-200 hover:scale-105' />
                                                                 <div className='flex items-center justify-center'>
                                                                         <button
                                                                         onClick={()=>window.open(link, '_blank')} 

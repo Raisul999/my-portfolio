@@ -1,14 +1,26 @@
-import React from 'react'
+import {useEffect} from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
+
 
 const Contact = () => {
+
+        useEffect(() => {
+                AOS.init({
+                        delay: 100, // values from 0 to 3000, with step 50ms
+                        duration: 1500,
+                        once: true
+                });
+        }, [])
+
         return (
                 <div name='contact' className='w-full bg-gradient-to-b from-zinc-600 to-zinc-700 text-white pt-20'>
                         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full '>
-                                <div>
+                                <div data-aos='fade-down'>
                                         <p className='text-4xl font-bold border-b-4  border-gray-500 inline'>Contact</p>
-                                        <p className='py-6'>Get in touch with me </p>
+                                        <p className='py-6'>Have something in mind? Let's connect </p>
                                 </div>
-                                <div className='flex justify-center items-center'>
+                                <div data-aos='fade-right' className='flex justify-center items-center'>
                                         <form
                                                 action='https://getform.io/f/679f308b-6d31-46f1-baa1-4a9671e6d07d'
                                                 method='POST'

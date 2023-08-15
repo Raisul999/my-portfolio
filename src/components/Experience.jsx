@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect } from 'react'
 import html from '../assets/html.png'
 import css from '../assets/css.png'
 import javascript from '../assets/javascript.png'
@@ -8,8 +8,18 @@ import node from '../assets/node.png'
 import github from '../assets/github.png'
 import tailwind from '../assets/tailwind.png'
 import graphql from '../assets/graphql.png'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 
 const Experience = () => {
+        useEffect(() => {
+                AOS.init({
+                        delay: 100, // values from 0 to 3000, with step 50ms
+                        duration: 1500,
+                        once: true
+                });
+        }, [])
+
         const techs = [
                 {
                         id: 1,
@@ -69,14 +79,14 @@ const Experience = () => {
         return (
                 <div name='experience' className='w-full bg-gradient-to-b from-zinc-700 to-zinc-600 text-white pt-20'>
                         <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full '>
-                                <div>
+                                <div data-aos='fade-down'>
                                         <p className='text-4xl font-bold border-b-4  border-gray-500 inline '>Experience</p>
                                         <p className='py-6'>List of technologies I have worked with </p>
                                 </div>
                                 <div className='w-full grid grid-cols-1 sm:grid-cols-3  gap-8 text-center py-8 px-12 sm:px-0'>
                                         {
                                                 techs.map(({ id, src, title, style }) => (
-                                                        <div key={id} className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}>
+                                                        <div data-aos='fade-right' key={id} className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}>
                                                                 <img src={src} alt="" className='w-20 mx-auto' />
                                                                 <p className='mt-4'>{title}</p>
                                                         </div>

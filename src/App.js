@@ -7,17 +7,19 @@ import Portfolio from './components/Portfolio';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-const App=()=> {
+
+const App = () => {
+
   return (
     <div className='bg-gradient-to-b from-zinc-700 to-zinc-600'>
-     <Navbar/>
-     <Home/>
-     <SocialLinks/>
-     <About/>
-     <Portfolio/>
-     <Experience/>
-     <Contact/>
-     <Footer/>
+      <Navbar />
+      <Home />
+      <SocialLinks />
+      <About />
+      <Portfolio />
+      <Experience />
+      <Contact />
+      <Footer />
     </div>
   );
 }
