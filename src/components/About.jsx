@@ -22,11 +22,13 @@ const About = () => {
         </div>
 
         <p data-aos="fade-right" className="text-xl mt-8">
-          Detail-oriented Software Engineer, passionate regarding
-          well-documented code and system architecture. Confident communicator,
-          strategic thinker, and innovative creator to develop software that is
-          customized to meet a company’s organizational needs, highlight their
-          core competencies, and further their success.
+          I prioritize well-documented code and meticulously crafted system
+          architecture. My confident communication skills enable me to
+          collaborate effectively and clearly explain technical concepts. As a
+          strategic thinker and innovative problem-solver, I design bespoke
+          software solutions that precisely align with a company's
+          organizational objectives, highlighting its core competencies and
+          driving its continued success.
         </p>
       </div>
     </div>

@@ -67,7 +67,7 @@ const Home = () => {
           data-aos="fade-right"
           className="flex flex-col justify-center h-full"
         >
-          <h2 className="text-4xl sm:text-4xl font-bold text-white">
+          <h2 className="text-4xl sm:text-4xl font-bold text-white my-1">
             <TypeAnimation
               sequence={[
                 "Resilient Dev 💻",
@@ -81,11 +81,16 @@ const Home = () => {
               repeat={Infinity}
             />
           </h2>
-          <p className="text-gray-200 text-xl py-4 max-w-md">
-            Enthusiastic developer, who loves to work with cutting-edge
-            technologies. I like to push myself to the core and be challenged
-            with new problems and retrieve solutions.
-          </p>
+          <div class="max-w-md mx-auto bg-gray-100 p-6 rounded-md shadow-md">
+            <p class="text-lg font-bold mb-4">Greetings, this is Raisul,</p>
+            <p class="text-gray-700">
+              A highly motivated individual with a deep passion for cutting-edge
+              technologies. I thrive on challenging problems and constantly
+              pushing the boundaries of my knowledge and skill set. My greatest
+              satisfaction lies in tackling complex problems and employing my
+              analytical abilities to formulate effective solutions.
+            </p>
+          </div>
           <div className="mb-4">
             <Link to="portfolio" smooth={true} duration={500}>
               <button className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer">
