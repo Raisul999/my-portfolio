@@ -27,7 +27,7 @@ const Navbar = () => {
   ];
   return (
     <>
-      <div className="flex justify-between items-center w-full h-20 text-white bg-black px-4">
+      <div className="flex justify-between items-center w-full h-20 text-white bg-black px-4 overflow-hidden">
         <div>
           <h1 className="text-4xl font-signature ml-2">Raisul Islam</h1>
         </div>
@@ -50,7 +50,14 @@ const Navbar = () => {
             window.scroll({ top: 0, left: 0, behavior: "instant" });
           }}
         >
-          {nav ? <FaTimes size={30} className="fixed" /> : <FaBars size={30} />}
+          {nav ? (
+            <div className="mx-6">
+              {" "}
+              <FaTimes size={30} className="fixed" />
+            </div>
+          ) : (
+            <FaBars size={30} />
+          )}
         </div>
       </div>
       {nav && (

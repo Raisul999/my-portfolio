@@ -67,7 +67,7 @@ const Home = () => {
           data-aos="fade-right"
           className="flex flex-col justify-center h-full"
         >
-          <h2 className="text-4xl sm:text-4xl font-bold text-white my-1">
+          <h2 className="text-2xl font-bold text-white my-1">
             <TypeAnimation
               sequence={[
                 "Resilient Dev 💻",
@@ -106,7 +106,7 @@ const Home = () => {
           <img
             src={MyPic}
             alt="my_pic"
-            className="rounded-2xl mx-auto w-3/3 md:w-2/3 mb-4"
+            className="rounded-2xl mx-auto sm:w-2/3 md:w-2/3 mb-4"
           />
         </div>
         <div className="flex flex-row md:flex-col lg:hidden">
