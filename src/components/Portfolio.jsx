@@ -83,12 +83,6 @@ const Portfolio = () => {
                 <p className="px-2 py-1 font-semibold">{name}</p>
               </div>
               <div className="flex flex-row items-center gap-1 justify-center my-1">
-                {/* <button
-                  onClick={() => window.open(link, "_blank")}
-                  className="w-1/2 px-6 py-3 duration-200 hover:scale-105"
-                >
-                  Demo
-                </button> */}
                 <button
                   onClick={() => window.open(link, "_blank")}
                   type="button"
@@ -96,7 +90,7 @@ const Portfolio = () => {
                 >
                   Demo
                 </button>
-                <button
+                {/* <button
                   onClick={() => window.open(repo, "_blank")}
                   type="button"
                   class="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
@@ -115,7 +109,7 @@ const Portfolio = () => {
                     />
                   </svg>
                   Repo
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
