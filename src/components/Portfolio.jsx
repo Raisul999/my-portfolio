@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import mgx from "../assets/portfolio/mgx.png";
 import todo from "../assets/portfolio/todo.png";
 import restro from "../assets/portfolio/restro.png";
-import pwa from "../assets/portfolio/weather.png";
-import word from "../assets/portfolio/word.png";
+import foodi from "../assets/portfolio/foodi.png";
+import shoplover from "../assets/portfolio/shoplover.png";
 import bot from "../assets/portfolio/chat-bot.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -20,34 +20,41 @@ const Portfolio = () => {
   const portfolios = [
     {
       id: 1,
-      src: mgx,
-      name: "mgX website",
-      link: "https://www.mgx.com/bd",
+      src: foodi,
+      name: "Foodi Website",
+      link: "https://foodibd.com/",
       repo: "",
     },
     {
       id: 2,
+      src: shoplover,
+      name: "Shoplover Ecommerce",
+      link: "https://shoplover.com/",
+      repo: "",
+    },
+    {
+      id: 3,
+      src: mgx,
+      name: "mgX Courier",
+      link: "https://www.mgx.com/bd",
+      repo: "",
+    },
+    {
+      id: 4,
       src: todo,
       name: "Todo App",
       link: "https://todo-task-tracker.onrender.com/",
       repo: "https://github.com/Raisul999/Todo-App",
     },
     {
-      id: 3,
+      id: 5,
       src: restro,
       name: "E Restro",
       link: "https://restaurant-website-nine.vercel.app/",
       repo: "https://github.com/Raisul999/Restaurant-Website",
     },
     {
-      id: 4,
-      src: pwa,
-      name: "Weather Forecast PWA",
-      link: "https://weather-forecast-vert.vercel.app/",
-      repo: "https://github.com/Raisul999/Weather-Forecast",
-    },
-    {
-      id: 5,
+      id: 6,
       src: bot,
       name: "AI Bot Eliza",
       link: "https://eliza-chat-bot.onrender.com/",

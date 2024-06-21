@@ -40,9 +40,8 @@ const SocialLinks = () => {
           Resume <BsFillPersonLinesFill size={25} />
         </>
       ),
-      href: "/Raisul_Islam.pdf",
+      href: "https://drive.google.com/file/d/13aNFJNcNdl8xjoY-KM_kbKE7GUPG81vQ/view?usp=sharing",
       style: "rounded-br-md",
-      download: true,
     },
   ];
   return (

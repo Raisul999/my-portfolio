@@ -46,14 +46,13 @@ const Home = () => {
     },
     {
       id: 4,
-      href: "/Raisul_Islam.pdf",
+      href: "https://drive.google.com/file/d/13aNFJNcNdl8xjoY-KM_kbKE7GUPG81vQ/view?usp=sharing",
       icon: (
         <BsFillPersonLinesFill
           className="border-2 rounded-md px-1 "
           size={35}
         />
       ),
-      download: true,
       tipId: "tool-tip4",
       name: (
         <ReactTooltip anchorId="tool-tip4" place="bottom" content="Resume" />
@@ -111,13 +110,7 @@ const Home = () => {
         </div>
         <div className="flex flex-row md:flex-col lg:hidden">
           {socials.map(({ id, href, icon, download, name, tipId }) => (
-            <a
-              key={id}
-              id={tipId}
-              href={href}
-              download={download}
-              target="_blank"
-            >
+            <a key={id} id={tipId} href={href} rel="noreferrer" target="_blank">
               <span className="flex justify-between items-center py-8 px-2 text-white mt-[-20px] cursor-pointer hover:scale-110 duration-200">
                 {icon}
               </span>
