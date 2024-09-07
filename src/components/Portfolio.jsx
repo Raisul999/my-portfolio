@@ -7,6 +7,8 @@ import shoplover from "../assets/portfolio/shoplover.png";
 import bot from "../assets/portfolio/chat-bot.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -81,12 +83,18 @@ const Portfolio = () => {
               key={id}
               className="shadow-md shadow-black-800 rounded-lg"
             >
-              <img
+              {/* <img
                 style={{ height: 140, width: "100%" }}
                 src={src}
                 className="rounded-md duration-200 hover:scale-105"
+              /> */}
+              <LazyLoadImage
+                alt={name}
+                effect="blur"
+                src={src}
+                className="rounded-md duration-200 hover:scale-105"
               />
-              <div className="flex flex-row justify-start">
+              <div className="flex flex-row justify-center">
                 <p className="px-2 py-1 font-semibold">{name}</p>
               </div>
               <div className="flex flex-row items-center gap-1 justify-center my-1">
@@ -95,7 +103,7 @@ const Portfolio = () => {
                   type="button"
                   class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"
                 >
-                  Demo
+                  Live Demo
                 </button>
                 {/* <button
                   onClick={() => window.open(repo, "_blank")}
