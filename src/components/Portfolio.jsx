@@ -3,7 +3,7 @@ import mgx from "../assets/portfolio/mgx.png";
 import todo from "../assets/portfolio/todo.png";
 import restro from "../assets/portfolio/restro.png";
 import foodi from "../assets/portfolio/foodi.png";
-// import shoplover from "../assets/portfolio/shoplover.png";
+import cartup from "../assets/portfolio/cartup.png";
 import bot from "../assets/portfolio/chat-bot.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -27,13 +27,13 @@ const Portfolio = () => {
       link: "https://foodibd.com/",
       repo: "",
     },
-    // {
-    //   id: 2,
-    //   src: shoplover,
-    //   name: "Shoplover Ecommerce",
-    //   link: "https://shoplover.com/",
-    //   repo: "",
-    // },
+    {
+      id: 2,
+      src: cartup,
+      name: "Cartup Ecommerce",
+      link: "https://cartup.com/",
+      repo: "",
+    },
     {
       id: 3,
       src: mgx,
